@@ -1,0 +1,438 @@
+.results {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2a2a2a;
+}
+
+.results h2 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.results h3 {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-bottom: 2px solid #2a2a2a;
+  padding-bottom: 10px;
+}
+
+.main-stats .stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+}
+
+.main-stats .stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-weight: bold;
+  color: #888;
+}
+
+.stat-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.stat-value.large {
+  font-size: 2rem;
+}
+
+.damage-comparison .damage-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.damage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+
+.damage-label {
+  font-weight: bold;
+  color: #888;
+}
+
+.damage-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #61dafb;
+}
+
+.breakdown table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.breakdown th {
+  text-align: left;
+  padding: 10px;
+  background: #2a2a2a;
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.breakdown td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.breakdown tr:last-child td {
+  border-bottom: none;
+}
+
+.type-label {
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.result-card {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #3a3a3a;
+}
+
+.result-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.recommendations {
+  margin-top: 30px;
+}
+
+.recommendations h2 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.rank {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #61dafb;
+  margin-bottom: 10px;
+}
+
+.formation-display {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.formation-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.formation-labels {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.rec-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rec-ratio,
+.rec-win {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .results {
+    padding: 15px 10px;
+    margin: 15px 0;
+  }
+
+  .results h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .results h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .main-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 12px;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .damage-comparison {
+    overflow-x: auto;
+  }
+
+  .damage-comparison th,
+  .damage-comparison td {
+    padding: 8px 6px;
+    font-size: 0.85rem;
+  }
+
+  .recommendation-card {
+    padding: 12px;
+  }
+
+  .recommendation-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .formation-details {
+    padding: 12px;
+  }
+
+  .formation-row {
+    font-size: 0.9rem;
+  }
+}
+
+.recommendation-card {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.recommendation-card h4 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.formation-details {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px 0;
+  border: 1px solid #3a3a3a;
+}
+
+.formation-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.formation-row:last-child {
+  border-bottom: none;
+}
+
+.formation-row span:first-child {
+  color: #888;
+  font-weight: 500;
+}
+
+.formation-row span:last-child {
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .results {
+    padding: 20px 15px;
+    margin: 20px 0;
+  }
+
+  .results h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .results h3 {
+    font-size: 1.1rem;
+  }
+
+  .main-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .damage-comparison th,
+  .damage-comparison td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+
+  .recommendations {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .recommendation-card {
+    padding: 15px;
+  }
+
+  .stat-value.large {
+    font-size: 1.5rem;
+  }
+
+  .damage-value {
+    font-size: 1.1rem;
+  }
+
+  .breakdown table {
+    font-size: 0.9rem;
+  }
+
+  .breakdown th,
+  .breakdown td {
+    padding: 8px;
+  }
+
+  .recommendations {
+    margin-top: 30px;
+  }
+
+  .recommendations h2 {
+    font-size: 1.4rem;
+  }
+
+  .recommendations-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    padding: 15px;
+  }
+
+  .formation-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results h2 {
+    font-size: 1.2rem;
+  }
+
+  .result-card {
+    padding: 12px;
+  }
+
+  .result-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .main-stats .stat-item {
+    padding: 12px 0;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+  }
+
+  .stat-value.large {
+    font-size: 1.3rem;
+  }
+
+  .damage-item {
+    padding: 8px;
+  }
+
+  .damage-label {
+    font-size: 0.9rem;
+  }
+
+  .damage-value {
+    font-size: 1rem;
+  }
+
+  .breakdown table {
+    font-size: 0.85rem;
+  }
+
+  .breakdown th,
+  .breakdown td {
+    padding: 6px;
+  }
+
+  .recommendations h2 {
+    font-size: 1.2rem;
+  }
+
+  .recommendation-card {
+    padding: 12px;
+  }
+
+  .rank {
+    font-size: 1.3rem;
+  }
+
+  .formation-text {
+    font-size: 1rem;
+  }
+
+  .formation-labels {
+    font-size: 0.8rem;
+  }
+}

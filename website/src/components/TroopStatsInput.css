@@ -1,0 +1,148 @@
+.troop-stats-input {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.troop-stats-input h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.troop-stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.stats-header,
+.stats-row {
+  display: grid;
+  grid-template-columns: 80px repeat(4, minmax(100px, 1fr));
+  gap: 12px;
+  align-items: center;
+  min-width: 550px;
+}
+
+.stats-header {
+  font-weight: 600;
+  color: #888;
+  font-size: 0.9rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #2a2a2a;
+  margin-bottom: 5px;
+}
+
+.stats-header div {
+  text-align: center;
+}
+
+.stats-header div:first-child {
+  text-align: left;
+}
+
+.troop-label {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.stats-row input {
+  padding: 12px 10px;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stats-row input:focus {
+  outline: none;
+  border-color: #4a4a4a;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.stats-row input::placeholder {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .troop-stats-input {
+    padding: 15px 12px;
+  }
+
+  .troop-stats-input h3 {
+    font-size: 1rem;
+  }
+
+  .troop-stats-grid {
+    gap: 10px;
+    padding-bottom: 5px;
+  }
+
+  .stats-header,
+  .stats-row {
+    grid-template-columns: 50px repeat(4, minmax(70px, 1fr));
+    gap: 6px;
+    min-width: 420px;
+  }
+
+  .stats-header {
+    font-size: 0.8rem;
+  }
+
+  .stats-row input {
+    padding: 11px 5px;
+    font-size: 0.9rem;
+  }
+
+  .troop-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .troop-stats-input {
+    padding: 12px 8px;
+  }
+
+  .troop-stats-input h3 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .troop-stats-grid {
+    gap: 8px;
+  }
+
+  .stats-header,
+  .stats-row {
+    grid-template-columns: 42px repeat(4, minmax(60px, 1fr));
+    gap: 4px;
+    min-width: 340px;
+  }
+
+  .stats-header {
+    font-size: 0.72rem;
+  }
+
+  .stats-row input {
+    padding: 9px 3px;
+    font-size: 0.85rem;
+  }
+
+  .troop-label {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,202 @@
+.formation-input {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.formation-input h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.formation-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.formation-row {
+  display: grid;
+  grid-template-columns: 60px 100px 30px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.formation-row label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.formation-row input {
+  padding: 8px;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.formation-row input:focus {
+  outline: none;
+  border-color: #4a4a4a;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.troop-count {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.formation-total {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  background: #2a2a2a;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #3a3a3a;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.formation-total .warning {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.troops-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.troops-input label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.troops-input input {
+  padding: 8px 12px;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 1rem;
+  flex: 1;
+  max-width: 200px;
+}
+
+.troops-input input:focus {
+  outline: none;
+  border-color: #4a4a4a;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .formation-input {
+    padding: 15px 12px;
+  }
+
+  .formation-input h3 {
+    font-size: 1rem;
+  }
+
+  .formation-grid {
+    gap: 10px;
+  }
+
+  .formation-row {
+    grid-template-columns: 45px 85px 20px 1fr;
+    gap: 8px;
+  }
+
+  .formation-row label {
+    font-size: 0.9rem;
+  }
+
+  .formation-row input {
+    padding: 11px 7px;
+    font-size: 0.9rem;
+  }
+
+  .troop-count {
+    font-size: 0.8rem;
+  }
+
+  .formation-total {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .troops-input {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .troops-input label {
+    font-size: 0.95rem;
+  }
+
+  .troops-input input {
+    max-width: 100%;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formation-input {
+    padding: 12px 8px;
+  }
+
+  .formation-input h3 {
+    font-size: 0.95rem;
+  }
+
+  .formation-grid {
+    gap: 8px;
+  }
+
+  .formation-row {
+    grid-template-columns: 40px 75px 18px 1fr;
+    gap: 6px;
+  }
+
+  .formation-row label {
+    font-size: 0.85rem;
+  }
+
+  .formation-row input {
+    padding: 10px 5px;
+    font-size: 0.85rem;
+  }
+
+  .troop-count {
+    font-size: 0.75rem;
+  }
+
+  .formation-total {
+    font-size: 0.85rem;
+    padding: 8px;
+    flex-wrap: wrap;
+  }
+
+  .troops-input label {
+    font-size: 0.9rem;
+  }
+
+  .troops-input input {
+    font-size: 0.95rem;
+    padding: 11px;
+  }
+}

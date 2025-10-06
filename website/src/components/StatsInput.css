@@ -1,0 +1,54 @@
+.stats-input {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.stats-input h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #61dafb;
+  font-size: 1.2rem;
+}
+
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats-header,
+.stats-row {
+  display: grid;
+  grid-template-columns: 80px repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+
+.stats-header {
+  font-weight: bold;
+  color: #888;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333;
+}
+
+.troop-label {
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.stats-row input {
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.stats-row input:focus {
+  outline: none;
+  border-color: #61dafb;
+}
