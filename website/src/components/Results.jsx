@@ -89,33 +89,63 @@ function Results({ result, recommendations }) {
 
       {recommendations && recommendations.length > 0 && (
         <div className="recommendations">
-          <h2>🧠 Top Recommended Formations</h2>
+          <h2>🧠 {recommendations[0].scenario ? 'Strategic Formation Guide' : 'Top Recommended Formations'}</h2>
           <div className="recommendations-list">
             {recommendations.map((rec, idx) => (
               <div key={idx} className="recommendation-card">
                 <div className="rank">#{idx + 1}</div>
                 <div className="formation-display">
+                  {rec.scenario && (
+                    <span className="scenario-label" style={{ color: '#00bfff', fontWeight: 'bold', marginBottom: '4px' }}>
+                      {rec.scenario}
+                    </span>
+                  )}
                   <span className="formation-text">
                     {Math.round(rec.formation.Inf * 100)}:
                     {Math.round(rec.formation.Cav * 100)}:
                     {Math.round(rec.formation.Arch * 100)}
                   </span>
                   <span className="formation-labels">(Inf:Cav:Arch)</span>
+                  {rec.description && (
+                    <span className="description-text" style={{ fontSize: '0.85em', color: '#aaa', marginTop: '4px' }}>
+                      {rec.description}
+                    </span>
+                  )}
                 </div>
-                <div className="rec-stats">
-                  <span
-                    className="rec-ratio"
-                    style={{ color: getRatioColor(rec.ratio) }}
-                  >
-                    Ratio: {rec.ratio.toFixed(3)}
-                  </span>
-                  <span
-                    className="rec-win"
-                    style={{ color: getWinColor(rec.winPercentage) }}
-                  >
-                    Win: {rec.winPercentage.toFixed(1)}%
-                  </span>
-                </div>
+                {rec.ratio !== null && rec.winPercentage !== null && (
+                  <div className="rec-stats">
+                    <span
+                      className="rec-ratio"
+                      style={{ color: getRatioColor(rec.ratio) }}
+                    >
+                      Ratio: {rec.ratio.toFixed(3)}
+                    </span>
+                    <span
+                      className="rec-win"
+                      style={{ color: getWinColor(rec.winPercentage) }}
+                    >
+                      Win: {rec.winPercentage.toFixed(1)}%
+                    </span>
+                  </div>
+                )}
+                {rec.yourDamage && rec.enemyDamage && (
+                  <div className="rec-damage" style={{ marginTop: '8px', fontSize: '0.9em', color: '#ccc' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                      <span>Your Damage:</span>
+                      <span style={{ color: '#00ff88', fontWeight: 'bold' }}>{rec.yourDamage.toLocaleString()}</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                      <span>Enemy Damage:</span>
+                      <span style={{ color: '#ff8888', fontWeight: 'bold' }}>{rec.enemyDamage.toLocaleString()}</span>
+                    </div>
+                  </div>
+                )}
+                {rec.yourBreakdown && (
+                  <div className="rec-breakdown" style={{ marginTop: '8px', fontSize: '0.85em', color: '#999' }}>
+                    <div style={{ marginBottom: '2px' }}>Your: Inf {rec.yourBreakdown.Inf.toLocaleString()} | Cav {rec.yourBreakdown.Cav.toLocaleString()} | Arch {rec.yourBreakdown.Arch.toLocaleString()}</div>
+                    <div>Enemy: Inf {rec.enemyBreakdown.Inf.toLocaleString()} | Cav {rec.enemyBreakdown.Cav.toLocaleString()} | Arch {rec.enemyBreakdown.Arch.toLocaleString()}</div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
